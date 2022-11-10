@@ -1,0 +1,478 @@
+@charset "utf-8";
+@media screen and (max-width: 1137px) {
+	.wrap2{ width:100%;height:721PX;}
+}
+@media screen and (max-width: 1024px) {
+.right_leaf,.left_leaf,.right_leaf3,.left_leaf3{ display:none}	
+.owl-nav{ width:100%;}
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev{    margin-right:0;}
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev{margin-left:0;}
+}
+
+@media screen and (max-width: 1000px) {
+.mobile_store{ display:block;}
+.pc_store{display:none;}
+.order{ clear:both; width:100%; display:block}
+
+.banner{ z-index:1}
+.second{ padding-top:80px;}
+#b4{padding-top:20px;}
+.header_border{ z-index:9999;}
+
+.head_logo{ display:none}
+
+.wrap{ width:100%;}
+.wrap2{ width:100%;height:721PX;}
+.width1000{ width:90%}
+.logo{ width:100%; background-size:30%;left:5%; top:1%}	
+.drink{ width:100%; background-size:70%;left:33%;}
+.article{ float:none; margin:auto;overflow:hidden;width:90%;}
+.article2{display:block; clear:both; padding-top:100px;float:none; margin:auto;}
+.third2{ margin-left:5%}
+#owl-demo{ overflow-x: hidden; height:720px;}
+	#header-wrap{ background:none}
+	.left_leaf{ z-index:3}
+	.right_leaf{ z-index:3}
+	.banner{ padding-top:65px}
+	h1{ display:block}
+		header{    width: 100%;
+    background: url(../images/menu.png) bottom center no-repeat;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    display: block;
+    margin-top: 0;}	
+	#header-wrap h1 a{display:block;}
+
+	#mobile-nav-btn {
+		display: block;
+		width: 50px;
+		height: 50px;
+		overflow: hidden;
+		text-align: center;
+		color: #FFF;
+		line-height: 50px;
+		position: absolute;
+		right: 4%;
+		top: 10px;
+		cursor: pointer
+	}
+
+	#mobile-nav-btn span {
+		display: block;
+		width: 30px;
+		height: 3px;
+		position: absolute;
+		background-color: #fff;
+		left: 50%;
+		margin-left: -15px;
+		-webkit-transition: all .25s ease-in-out;
+		-moz-transition: all .25s ease-in-out;
+		-o-transition: all .25s ease-in-out;
+		transition: all .25s ease-in-out
+	}
+
+	#mobile-nav-btn span:nth-of-type(1) {
+		top: 15px
+	}
+
+	#mobile-nav-btn span:nth-of-type(2) {
+		top: 23px
+	}
+
+	#mobile-nav-btn span:nth-of-type(3) {
+		top: 31px
+	}
+
+	#mobile-nav-btn.close span:nth-of-type(1) {
+		top: 23px;
+		-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg)
+	}
+
+	#mobile-nav-btn.close span:nth-of-type(2) {
+		top: 23px;
+		-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		opacity: 0
+	}
+
+	#mobile-nav-btn.close span:nth-of-type(3) {
+		top: 23px;
+		-ms-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg)
+	}
+
+	#header-wrap nav {
+    display: none;
+    width: 100%;
+    float: none;
+    height: 100%;
+    background-color: rgba(143,62,27,0.95);
+    z-index: 999999999999999;
+    float: left;
+    position: fixed;
+	margin:0;
+}
+
+	#header-wrap nav .nav-about {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+		border-bottom: 1px solid #EEE	;
+		display:block;
+	}
+
+	#header-wrap nav .nav-about { padding:15px 0; display:block; overflow:hidden}
+
+	
+	.normal-wrap {
+		width: 92%;
+		margin-left: 4%
+	}
+
+	.index-intro {
+		padding: 30px 0
+	}
+
+	
+
+	#item-wrap {
+		width: 100%;
+		margin: 0 auto
+	}
+
+	#item-wrap a {
+		background-size: 100% auto;
+		width: 20%;
+		margin: 0;
+		height: 320px
+	}
+
+	#item-wrap a:nth-child(5) {
+		display: block
+	}
+
+	#item-wrap a:nth-of-type(4n) {
+		margin: 0
+	}
+
+	#item-wrap a:nth-of-type(2n+1) {
+		margin: 0
+	}
+
+	#item-wrap a:nth-of-type(3n) {
+		width: 20%
+	}
+
+	#item-wrap a .thumbnail {
+		position: static;
+		height: 240px
+	}
+
+	#item-wrap a .thumbnail img {
+		width: 100%;
+		height: auto;
+		position: static
+	}
+
+	#item-wrap a h3 {
+		font-size: 18px;
+		line-height: 26px;
+		margin: 10px 0 3px;
+		text-align: center
+	}
+
+	#item-wrap a span {
+		font-size: 15px;
+		text-align: center
+	}
+
+	#content-wrap {
+		width: 100%
+	}
+
+	#content-wrap article {
+		padding: 15px 5%;
+		width: 65%;
+		margin: 1px 0;
+		line-height: 1.7em;
+		font-size: 18px
+	}
+
+	#sidebar {
+		width: 25%;
+		margin: 30px 0
+	}
+
+	.sidebar-ul {
+		width: 80%;
+		margin: 0 0 50px 10%
+	}
+
+	.sidebar-ul li span:first-child {
+		font-size: 14px;
+		color: #969696
+	}
+
+	.sidebar-ul li span:first-child+span {
+		font-size: 18px;
+		color: #000
+	}
+
+	.sidebar-ul li:first-child {
+		font-size: 21px
+	}
+
+.footer{ padding:5px 0; font-size:16px;}
+
+}
+
+@media screen and (min-width: 750px) and (max-width: 980px) {
+	#banner {
+		width: 100%;
+		height: 150px
+	}
+
+	.index-intro a {
+		width: 25%;
+		height: auto
+	}
+
+	.index-intro a p {
+		display: block
+	}
+
+	#item-wrap {
+		width: 100%;
+		margin: 0 auto
+	}
+
+	#item-wrap a {
+		background-size: 100% auto;
+		width: 33.3%;
+		margin: 0;
+		height: 320px
+	}
+
+	#item-wrap a:nth-child(5) {
+		display: block
+	}
+
+	#item-wrap a:nth-of-type(4n) {
+		margin: 0
+	}
+
+	#item-wrap a:nth-of-type(2n+1) {
+		margin: 0
+	}
+
+	#item-wrap a:nth-of-type(3n) {
+		width: 33.4%
+	}
+
+	#item-wrap a .thumbnail {
+		position: static;
+		height: 240px
+	}
+
+	#item-wrap a .thumbnail img {
+		width: 100%;
+		height: auto;
+		position: static
+	}
+
+	#item-wrap a h3 {
+		font-size: 18px;
+		line-height: 26px;
+		margin: 10px 0 3px;
+		text-align: center
+	}
+
+	#item-wrap a span {
+		font-size: 15px;
+		text-align: center
+	}
+
+	#filter.tag-switch {
+		display: block;
+		margin: 0;
+		width: 100%;
+		background-color: #ddd;
+		width: 100%;
+		height: 40px;
+		line-height: 40px
+	}
+
+	#filter.tag-switch a:hover {
+		font-size: 15px
+	}
+
+	#filter.tag-switch a.current {
+		font-size: 15px
+	}
+
+	#sidebar {
+		width: 100%;
+		margin: 30px 0
+	}
+
+	.sidebar-ul {
+		width: 88%;
+		margin: 0 0 50px 6%
+	}
+
+	.sidebar-ul li {
+		overflow: hidden;
+		min-height: 30px
+	}
+
+	.sidebar-ul li span:first-child {
+		font-size: 15px;
+		width: 20%;
+		float: left;
+		line-height: 30px;
+		min-height: 30px
+	}
+
+	.sidebar-ul li span:first-child+span {
+		font-size: 18px;
+		width: 80%;
+		float: left;
+		line-height: 30px;
+		min-height: 30px
+	}
+
+	#blog-sidebar h2 {
+		height: 260px;
+		background-position: left center
+	}
+
+	#blog-sidebar.about h2 {
+		height: 260px;
+		background-position: left center
+	}
+
+	#blog-sidebar.news h2 {
+		height: 260px;
+		background-position: left center
+	}
+
+	#content.blog-overview #blog-sidebar {
+		width: 100%;
+		margin: 0
+	}
+
+	#blog-sidebar {
+		width: 100%;
+		margin: 0;
+		float: left
+	}
+
+	#blog-sidebar ul {
+		width: 100%;
+		margin: 0;
+		height: 40px
+	}
+
+	#blog-sidebar ul li {
+		float: left;
+		width: auto;
+		margin: 0 5px;
+		padding: 0 15px
+	}
+
+	#container {
+		width: 720px;
+		margin: 0 auto;
+		float: none
+	}
+
+	#team-tuapa {
+		color: #FFF
+	}
+
+	#team-tuapa .left {
+		width: 100%;
+		margin: 10px 0 30px;
+		font-size: 16px;
+		line-height: 1.6em;
+		float: left
+	}
+
+	#team-tuapa .left h3 {
+		font-size: 26px;
+		line-height: 2em;
+		margin-bottom: 10px
+	}
+
+	#team-tuapa .left p {
+		padding: 0;
+		border-left: none
+	}
+
+	#team-tuapa .left a {
+		width: 100%
+	}
+
+	#team-tuapa .right {
+		width: 100%;
+		margin: 10px 0 30px
+	}
+
+	#team-tuapa .right img {
+		margin: 0 auto;
+		display: block;
+		width: 70%;
+		height: auto
+	}
+
+	#events-apply {
+		width: 100%;
+		background-color: #42936F
+	}
+
+	#content-wrap article {
+		border: 1px solid #eee;
+		padding: 20px 6%;
+		width: 88%;
+		line-height: 1.6em;
+		font-size: 21px;
+		background-color: #fff;
+		margin-top: 0
+	}
+}
+@media screen and (max-width: 900px) {
+.owl-prev{margin-right:20px; }	
+.owl-next{margin-left:20px; }
+}
+@media screen and (max-width:697px) {
+.width687{ width:95%}
+.footer_logo h4{ width:11%; background-size:100%;}
+.Copyright{width:80%}
+.Copyright{ margin-top:0;}
+}
+@media screen and (max-width:659px) {
+.banner{ height:616px;}	
+.join{ width:70%}
+}
+@media screen and (max-width:460px) {
+	.banner{ height:516px;}	
+	
+}
+@media screen and (max-width: 510px) {
+.article{ width:90%;}	
+.article2{ width:90%;margin:auto;}
+.leaf_b{width:100%; }
+.cup{width:100%;  right:auto }
+}
+@media screen and (max-width: 750px){
+	 .owl-next,.owl-prev{ width:30px; background-size:100%;}
+	}
+@media screen and (max-width: 1000px) and (max-height: 348px){
+	#header-wrap nav{     overflow: auto;width:100%; }
+	}

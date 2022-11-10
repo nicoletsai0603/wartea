@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>skrollr - parallax scrolling for test</title>
+
+	<link href="http://fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css" />
+    
+    <style>
+html, body {
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+	overflow-x:hidden;
+}
+
+.skrollable {
+	/*
+	 * First-level skrollables are positioned relative to window
+	 */
+	position:fixed;
+
+	/*
+	 * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+	 */
+	z-index:100;
+}
+
+/*
+.skrollable.unrendered {
+	display:none !important;
+}
+*/
+
+.skrollable .skrollable {
+	/*
+	 * Second-level skrollables are positioned relative their parent skrollable
+	 */
+	position:absolute;
+}
+
+.skrollable .skrollable .skrollable {
+	/*
+	 * Third-level (and below) skrollables are positioned static
+	 */
+	position:static;
+}
+ 
+ 
+ /*自訂的東西開始*/
+	#bg {
+		top: 0; left: 0; width: 100%; height: 100%;
+		
+	}
+
+	.clock {
+		width:300px;
+		height:300px;
+		margin-right:-150px;
+		margin-top:-150px;
+		}
+		
+	.pic01 {
+		width:100%;
+		height:100%;
+		background:url(img/bg001.jpg) center top no-repeat;
+		z-index:99;
+			}
+			
+	.pic02 {
+		width:100%;
+		height:100%;
+		overflow:hidden;
+		background:url(img/bg002.jpg) center top no-repeat;
+		z-index:100;
+			}
+			
+		.bounceInDown {
+		z-index:110;
+		-webkit-animation-name: bounceInDown;
+		-moz-animation-name: bounceInDown;
+		-o-animation-name: bounceInDown;
+		animation-name: bounceInDown;
+		}	
+					
+		.animated {
+-webkit-animation-duration: 1s;
+-moz-animation-duration: 1s;
+-o-animation-duration: 1s;
+animation-duration: 1s;
+-webkit-animation-fill-mode: both;
+-moz-animation-fill-mode: both;
+-o-animation-fill-mode: both;
+animation-fill-mode: both;
+}	
+			
+			
+	.bt {
+		width:300px;
+		height:300px;
+		margin:0;
+		
+		-webkit-animation-duration: 1s;
+		-webkit-animation-delay: .2s;
+		-webkit-animation-timing-function: ease;
+		-webkit-animation-fill-mode: both;
+		-moz-animation-duration: 1s;
+		-moz-animation-delay: .2s;
+		-moz-animation-timing-function: ease;
+		-moz-animation-fill-mode: both;
+		-ms-animation-duration: 1s;
+		-ms-animation-delay: .2s;
+		-ms-animation-timing-function: ease;
+		-ms-animation-fill-mode: both;
+		-o-animation-duration: 1s;
+		-o-animation-delay: .2s;
+		-o-animation-timing-function: ease;
+		-o-animation-fill-mode: both;
+		animation-duration: 1s;
+		animation-delay: .2s;
+		animation-timing-function: ease;
+		animation-fill-mode: both;
+		
+
+		}
+ 
+</style>
+    
+</head>
+
+<body>
+
+	<!--<div id="bg" data-0="background-color:#F39;" data-1000="" data-2000="background-color:#F6C;" data-2500="" data-3000="background-color:#F9C;" data-3500="" ></div>-->
+    
+    <!--<div class="clock" data-0="opacity:1; right:50%; top:50%;" data-3000="opacity:0" style="right:50%; top:50%;" >
+    	<img src="img/clock.png" width="300" height="300" alt="clock">
+    </div>-->
+	
+    <div class="animated bounceInDown">
+    	<div class="bt" ></div>
+    
+    </div>
+    
+    <div class="pic01" data-0="top:0px;" data-400="top:-500px" data-800="top:-1500px"></div>
+    
+    <div class="pic02" data-0="top:0px;" data-1000="" data-1200="top:-500px;" data-1400="top:-1500px;" >
+    
+    	<div class="bt" data-0="top:0;" data-600="top:0;" data-800="top:100px" data-1300="top:900px;" ><img src="img/butterfly.png" width="300" height="278" alt="b"></div>
+    
+    </div>
+    
+    
+	
+    
+	
+<script type="text/javascript" src="skrollr.min.js"></script>
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="skrollr.ie.min.js"></script>
+	<![endif]-->
+
+<script type="text/javascript">
+	skrollr.init();
+	</script>
+
+	<div id="scrollinfo" style="position: fixed; top: 0; left: 0; z-index:999;"><div id="scrollinfoshow" style="background-color:black;display:none; color: white; left:10px;float:left"></div><a href="javascript:showhide()" style="float:left"><strong>OPEN</strong></a></div>
+<script type="text/javascript" src="scrollinfoshow.js"></script>
+
+<script type="text/javascript">
+	//$(window).scroll(DisplayCurrentScroll());
+	</script>
+</body>
+</html>
+

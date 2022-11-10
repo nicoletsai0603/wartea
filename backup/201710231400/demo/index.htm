@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>skrollr - parallax scrolling for test</title>
+
+	<link href="http://fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css" />
+
+<style>
+html, body {
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+	overflow-x:hidden;
+}
+
+.skrollable {
+	/*
+	 * First-level skrollables are positioned relative to window
+	 */
+	position:fixed;
+
+	/*
+	 * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+	 */
+	z-index:100;
+}
+
+/*
+.skrollable.unrendered {
+	display:none !important;
+}
+*/
+
+.skrollable .skrollable {
+	/*
+	 * Second-level skrollables are positioned relative their parent skrollable
+	 */
+	position:absolute;
+}
+
+.skrollable .skrollable .skrollable {
+	/*
+	 * Third-level (and below) skrollables are positioned static
+	 */
+	position:static;
+}
+
+	h1{
+		color: #fff; font-size: 4em;
+		text-align: center;
+		font-family: ‘Dosis’, sans-serif;
+	}
+	#bg {
+		top: 0; left: 0; width: 100%; height: 100%;
+	}
+
+	.holder{ width: 300px; height: 300px;
+		margin-left: -150px; margin-top: -150px;
+	}
+
+	.arm { 
+		width: 30px; height: 300px; 
+		margin-left: -15px; margin-top: -150px; 
+		-webkit-transform-origin: 50% 50%;
+		-moz-transform-origin: 50% 50%; 
+		-ms-transform-origin: 50% 50%; 
+		-o-transform-origin: 50% 50%; 
+		transform-origin: 50% 50%; 
+	}
+
+	.text1 { 
+		width: 300px; height: 320px; 
+		margin-left: -150px; margin-top: -160px; 
+	}
+ 
+	#cog-wrapper {
+		width: 400px; height: 400px;
+		margin-left: -200px; margin-top: -200px;
+	}
+
+
+
+	#cog1 { 
+		width: 250px; height: 250px; 
+		margin-left: 30px; margin-top: 30px; 
+		-webkit-transform-origin: 50% 50%; 
+		-moz-transform-origin: 50% 50%; 
+		-ms-transform-origin: 50% 50%; 
+		-o-transform-origin: 50% 50%; 
+		transform-origin: 50% 50%; 
+	}
+
+	#cog2 {
+		width: 200px; height: 200px;
+		margin-left: 200px; margin-top: 200px;
+		-webkit-transform-origin: 50% 50%;
+  		-moz-transform-origin: 50% 50%;
+  		-ms-transform-origin: 50% 50%;
+  		-o-transform-origin: 50% 50%;
+  		transform-origin: 50% 50%;
+	}
+
+	.text2 {
+		width: 50%; height: 200px;
+		margin-left: -25%; margin-top: -100px;
+	}
+</style>
+
+
+
+
+</head>
+<body>
+
+    <div id="bg" data-0="background-color:rgb(70,168,189);" data-1400="" data-1900="background-color:rgb(133,60,79)" data-3500="" data-4000="background-color:rgb(60,60,60)" data-4950="" data-5250="background-color:rgb(255,142,73)"></div>
+
+ <!-- First Section !-->
+ <!– 時鐘 !-->
+<div class="holder" data-0="top:50%; left:65%" data-1500="opacity:1" data-1700="opacity:0" style="top:50%; left:65%"><img src="img/clock.png" width="300" height="300" alt="clock"></div>
+<!– 時針 !-->
+<div class="arm" data-0="top:50%; left:65%; transform:rotate(0deg);" data-1400="top:50%; left:65%; transform:rotate(60deg);opacity:1" data-1600="top:50%; left:65%; transform:rotate(65deg);opacity:0" style="top:50%; left:65%"><img src="img/arm2.png" width="30" height="300" alt="clock-hand"></div>
+<!– 分針 !-->
+<div class="arm" data-0="top:50%; left:65%; transform:rotate(0deg);" data-1400="top:50%; left:65%; transform:rotate(720deg);opacity:1" data-1600="top:50%; left:65%; transform:rotate(790deg);opacity:0" style="top:50%; left:65%"><img src="img/arm1.png" width="30" height="300" alt="clock-hand"></div>
+<!– 說明 !--> 
+<div class="text1" data-0="top:50%; left:35%" data-1350="top:50%; left:35%; opacity:1" data-1650="top:50%; left:-15%; opacity:0" style="top:50%; left:35%"><h1>拉動捲軸<br>歲月如梭</h1></div>
+
+
+	<!-- Second Section !-->
+	<div id="cog-wrapper" data-1600="top:50%; left[quadratic]:130%" data-1900="top:50%; left:50%" data-3500="top:50%; left:50%" data-3800="top:50%; left:-130%">
+	<div id="cog1" data-1600="transform:rotate(0deg);" data-3800="transform:rotate(-195deg);"><img src="img/cog1.png" width="250" height="250" alt="cog1"></div>
+	<div id="cog2" data-1600="transform:rotate(0deg);" data-3800="transform:rotate(360deg);"><img src="img/cog2.png" width="200" height="200" alt="cog2"></div> 
+	</div>
+	<div class="text2" data-1550="top:-20%; left: 50%" data-1750="top:25%;left:50%" data-3600="" data-3800="top:-20%; left: 50%"><h1>We'll Apply</h1></div>
+	<div class="text2" data-1550="top:120%; left: 50%" data-1750="top:80%;left:50%" data-3600="" data-3800="top:120%; left: 50%"><h1>Ourselves</h1></div>
+
+
+	<!-- Third Section !-->
+	<div class="holder" data-3900="opacity:0;" data-4000="opacity:1;" data-4950="top:50%; left:65%" data-5150="top:50%; left:125%; ">
+	<img src="img/bulb.png" width="300" height="340" alt="light bulb">
+	</div>
+	<div class="text1" data-3800="top:120%; left:35%" data-4000="top:50%; left:35%;" data-4950="opacity:1;" data-5150="top:50%; left:-10%; opacity:0">
+	<h1>Bringing<br>You A<br>Solution</h1>
+	</div>
+
+
+	<!-- Fourth Section !-->
+	<div class="holder" data-4950="opacity:0; top:50%; left:-15%;" data-5250="opacity:1; top:50%; left:35%;">
+	<img src="img/home.png" width="300" height="300" alt="home">
+	</div>
+	<div class="holder" data-5550="opacity:0; top:0%; left:35%;" data-5850="opacity:1; top:50%; left:35%;">
+	<img src="img/tick.png" width="300" height="300" alt="tick">
+	</div>	
+    
+	<div class="text1" data-5050="top:20%; left:65%; opacity:0" data-5350="top:40%; left:65%; opacity:1">
+	<h1>We Are<br>The Home</h1>
+	</div>
+	<div class="text1" data-5750="top:80%; left:65%; opacity:0" data-6050="top:68%; left:65%; opacity:1">
+	<h1>Of Great<br>Ideas</h1>
+	</div>
+    
+
+    	<script type="text/javascript" src="skrollr.min.js"></script>
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="skrollr.ie.min.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+	skrollr.init();
+	</script>
+
+	<div id="scrollinfo" style="position: fixed; top: 0; left: 0; z-index:999;"><div id="scrollinfoshow" style="background-color:black;display:none; color: white; left:10px;float:left"></div><a href="javascript:showhide()" style="float:left"><strong>OPEN</strong></a></div>
+	<script type="text/javascript" src="scrollinfoshow.js"></script>
+
+	<script type="text/javascript">
+	//$(window).scroll(DisplayCurrentScroll());
+	</script>
+</body>
+</html>
